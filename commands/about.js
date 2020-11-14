@@ -20,7 +20,6 @@ module.exports = {
 			.then((response) => message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.INFO)
 				.setTitle('Bot Information')
-				.setDescription('Lakuna is developed by Travis Martin and is licensed under the GNU Affero General Public License version 3.0.')
 				.setThumbnail(message.client.user.displayAvatarURL())
 				.addField('Ready Time', message.client.readyAt.toISOString(), true)
 				.addField('Guild Count', response.reduce((a, c) => a + c), true)
@@ -28,9 +27,7 @@ module.exports = {
 				.addField('Uptime', formatTime(message.client.uptime), true)
 				.addField('User', `${message.client.user}`, true)
 				.addField('Source Code', client.urls.REPO, true)
-				.addField('Report an Issue', client.urls.ISSUE, true)
 				.addField('Website', client.urls.WEBSITE, true)
-				.addField('Support Server', client.urls.SUPPORT, true)
 			)).catch((error) => console.log);
 	}
 };
