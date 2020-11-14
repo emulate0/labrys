@@ -8,7 +8,6 @@ module.exports = {
 		const embed = new MessageEmbed()
 			.setColor(message.client.colors.INFO)
 			.setTitle('Help')
-			.addField('Support Server', message.client.urls.SUPPORT);
 		if (args.length) {
 			// Specific command.
 			const command = message.client.commands.find((command) => command.names.includes(args[0]));
