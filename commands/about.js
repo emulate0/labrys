@@ -31,6 +31,6 @@ module.exports = {
 				.addField('Report an Issue', client.urls.ISSUE, true)
 				.addField('Website', client.urls.WEBSITE, true)
 				.addField('Support Server', client.urls.SUPPORT, true)
-			)).catch((error) => console.log);
+			))//.catch((error) => console.log);
 	}
 };
