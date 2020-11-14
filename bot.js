@@ -12,9 +12,7 @@ client.PREFIX = '!';
 client.colors = { SUCCESS: '#32CD32', WARNING: '#FDEE00', ERROR: '#FF2400', INFO: '#007FFF' };
 client.urls = {
 	REPO: 'https://github.com/emulate0/labrys',
-	ISSUE: 'https://github.com/emulate0/labrys/issues',
 	WEBSITE: 'https://polyester.club',
-	SUPPORT: 'https://polyester.club'
 };
 
 // Invite cache for invite link attribution.
@@ -249,9 +247,7 @@ client.on('message', (message) => {
 			.setDescription(`Hello, ${message.author}! Get a list of my commands using \`${client.PREFIX}help\`.`)
 			.setTitle('Hello!')
 			.addField('Source Code', client.urls.REPO)
-			.addField('Report an Issue', client.urls.ISSUE)
 			.addField('Website', client.urls.WEBSITE)
-			.addField('Support Server', client.urls.SUPPORT)
 		).catch((error) => console.log);
 	}
 });
