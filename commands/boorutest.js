@@ -6,7 +6,7 @@ var nsfw = ['e621', 'hypnohub', 'danbooru', 'konac', 'yandere', 'gelbooru', 'rul
 module.exports = {
 	names: ['image'],
 	usage: 'image [tag], [tag]...',
-	description: 'Search an image and it'll generate one from a booru.',
+	description: 'Search an image and it will generate one from a booru.',
 	execute: (message, args) => {
 		//add random from sfw and nsfw
 		//site, tags
