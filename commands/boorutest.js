@@ -10,12 +10,12 @@ module.exports = {
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru')
 			
-			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true })
-	.then(posts => {
-		for (let post of posts)
-      .addImage(post.fileUrl)
-  })
-  
+			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true }).then(posts =>
+		{
+			for (let post of posts)
+				const imageLink = post.fileUrl
+		})
+			.addImage(post.fileUrl)
 		).catch((error) => console.log);
 		
 	}
