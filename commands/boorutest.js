@@ -14,6 +14,7 @@ module.exports = {
 				.setColor(message.client.colors.NSFW)
 				.setTitle('Boorutest')
 				.setImage(posts[0].fileUrl)
-		}).catch((error) => console.log)
+		).catch((error) => console.log)
+		}
 	}
 };
