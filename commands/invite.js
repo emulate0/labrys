@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
 	names: ['invite'],
 	usage: 'INVITE',
-	description: 'Invite Lakuna to your server.',
+	description: 'Invite Labrys to your server.',
 	execute: (message, args) => {
 		return message.client.generateInvite({ permissions: [
 			'MANAGE_GUILD', 'ADD_REACTIONS', 'VIEW_CHANNEL',
@@ -12,7 +12,7 @@ module.exports = {
 		] })
 			.then((invite) => message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.INFO)
-				.setDescription(`Invite Lakuna to your server: ${invite}`)
+				.setDescription(`Invite Labrys to your server: ${invite}`)
 				.setTitle('Invite')
 				.setURL(invite)
 			))
