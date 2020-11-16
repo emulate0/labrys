@@ -1,12 +1,12 @@
 const { MessageEmbed } = require('discord.js');
 const Booru = require('booru')
 var sfw = ['safebooru']
-var nsfw = ['e621', 'hypnohub', 'danbooru', 'konac', 'yandere', 'gelbooru', 'rule34', 'xbooru', 'paheal', 'derp', 'realbooru', 'tbib', 'konan']
+var nsfw = ['hypnohub', 'danbooru', 'konac', 'yandere', 'gelbooru', 'rule34', 'xbooru', 'paheal', 'realbooru', 'konan']
 
 module.exports = {
-	names: ['image'],
-	usage: 'image [tag], [tag]...',
-	description: 'Search an image and it will generate one from a booru.',
+	names: ['b'],
+	usage: 'b [tag], [tag]...',
+	description: 'Generates an image from a booru.',
 	execute: (message, args) => {
 		//add random from sfw and nsfw
 		//site, tags
@@ -18,8 +18,8 @@ module.exports = {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.NSFW)
-				.setTitle('Boorutest')
 				.setImage(posts[0].fileUrl)
+				.addField(posts[0].postView)
 			).catch((error) => console.log)
 			}			
 		}
@@ -32,8 +32,8 @@ module.exports = {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.SUCCESS)
-				.setTitle('Boorutest')
 				.setImage(posts[0].fileUrl)
+				.addField(posts[0].postView)
 			).catch((error) => console.log)
 			}		
 		}
