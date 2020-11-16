@@ -6,7 +6,7 @@ module.exports = {
 	usage: 'boorutest [name]',
 	description: 'Testing out the Booru.',
 	execute: (message, args) => {
-		string booruUrl = ''
+		const booruUrl = '';
 		
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
@@ -22,7 +22,7 @@ module.exports = {
     }
 
     for (let post of posts) {
-	  booruUrl == post.fileUrl
+	  booruUrl = post.fileUrl
       console.log(post.fileUrl)
     }
   })
