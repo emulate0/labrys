@@ -12,10 +12,11 @@ module.exports = {
 
 			imgLink = posts[0].fileUrl
 		}	
+		booruSearch('safebooru', ['cat'])
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Boorutest')
-			.setImage(booruSearch('safebooru', ['cat']) + imgLink)
+			.setImage(imgLink)
 		).catch((error) => console.log)
 	}
 };
