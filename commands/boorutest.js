@@ -13,7 +13,7 @@ module.exports = {
 	description: 'Testing out the Booru.',
 	execute: (message, args) => {
 		var imgLink = 'https://cdn.shopify.com/s/files/1/1061/1924/products/Woman_Saying_Hello_Emoji_grande.png?v=1571606062'
-		booruSearch('safebooru', ['cat'])
+		imgLink = booruSearch('safebooru', ['cat'])
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Boorutest')
