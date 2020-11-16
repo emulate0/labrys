@@ -19,7 +19,7 @@ module.exports = {
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.NSFW)
 				.setImage(posts[0].fileUrl)
-				.addField(posts[0].postView)
+				.addField(site, posts[0].postView)
 			).catch((error) => console.log)
 			}			
 		}
@@ -33,7 +33,7 @@ module.exports = {
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.SUCCESS)
 				.setImage(posts[0].fileUrl)
-				.addField(posts[0].postView)
+				.addField(site, posts[0].postView)
 			).catch((error) => console.log)
 			}		
 		}
