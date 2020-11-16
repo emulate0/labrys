@@ -6,7 +6,7 @@ module.exports = {
 	usage: 'boorutest [name]',
 	description: 'Testing out the Booru.',
 	execute: (message, args) => {
-		string booruUrl = '';
+		string booruUrl = ''
 		
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
