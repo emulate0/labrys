@@ -235,7 +235,6 @@ client.on('message', (message) => {
 			).catch((error) => console.log);
 		}
 
-		message.delete().catch((error) => console.log);
 	}
 
 	if (message.author.bot) { return; }
