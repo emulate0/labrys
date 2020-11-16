@@ -11,11 +11,6 @@ module.exports = {
 			.setTitle('Booru')
 			.addField('Client', `${new Date() - message.createdAt}ms`, true)
 			.addField('API', `${Math.round(message.client.ws.ping)}ms`, true)
-			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true })
-  .then(posts => {
-    for (let post of posts)
-      console.log(post.fileUrl, post.postView)
-  })
 		).catch((error) => console.log);
 	}
 };
