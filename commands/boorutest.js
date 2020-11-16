@@ -22,7 +22,7 @@ module.exports = {
     }
 
     for (let post of posts) {
-	  booruUrl = post.fileUrl
+	  booruUrl = post.fileUrl.toString
       console.log(post.fileUrl)
     }
   });
