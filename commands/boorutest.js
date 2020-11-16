@@ -12,8 +12,9 @@ module.exports = {
 		//site, tags
 		if (message.channel.nsfw)
 		{
+		var argsInput = [args[1]]
 		var randWebNSFW = Math.floor(Math.random() * 11)
-		booruSearch(nsfw[randWebNSFW], [args[1]])
+		booruSearch(nsfw[randWebNSFW], argsInput)
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
@@ -25,9 +26,10 @@ module.exports = {
 		}
 		else
 		{
+		var argsInput = [args[1]]
 		var randWebSFW = Math.floor(Math.random() * 4)
 		console.log(sfw[randWebSFW])
-		booruSearch(sfw[randWebSFW], [args[1]])
+		booruSearch(sfw[randWebSFW], argsInput)
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
