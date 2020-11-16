@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const Booru = require('booru')
-var sfw = ['e926.net', 'konan', 'safebooru', 'tbib']
-var nsfw = ['e621', 'hypnohub', 'danbooru', 'konac', 'yandere', 'gelbooru', 'rule34', 'xbooru', 'paheal', 'derp', 'realbooru']
+var sfw = ['e926.net', 'konan', 'safebooru']
+var nsfw = ['e621', 'hypnohub', 'danbooru', 'konac', 'yandere', 'gelbooru', 'rule34', 'xbooru', 'paheal', 'derp', 'realbooru', 'tbib']
 
 module.exports = {
 	names: ['image'],
@@ -12,9 +12,8 @@ module.exports = {
 		//site, tags
 		if (message.channel.nsfw)
 		{
-		var argsInput = [args[1]]
 		var randWebNSFW = Math.floor(Math.random() * 11)
-		booruSearch(nsfw[randWebNSFW], argsInput)
+		booruSearch(nsfw[randWebNSFW], args[0])
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
@@ -26,10 +25,9 @@ module.exports = {
 		}
 		else
 		{
-		var argsInput = [args[1]]
 		var randWebSFW = Math.floor(Math.random() * 4)
 		console.log(sfw[randWebSFW])
-		booruSearch(sfw[randWebSFW], argsInput)
+		booruSearch(sfw[randWebSFW], args[0])
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
