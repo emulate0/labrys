@@ -11,9 +11,8 @@ module.exports = {
 			.setTitle('Booru')
 			.addField('Client', `${new Date() - message.createdAt}ms`, true)
 			.addField('API', `${Math.round(message.client.ws.ping)}ms`, true)
-		).catch((error) => console.log);
-		
-		Booru.search('safebooru', 'glaceon', { limit: 1, random: true })
+			
+			Booru.search('safebooru', 'glaceon', { limit: 1, random: true })
   .then(posts => {
     if (posts.length === 0) {
       console.log('No images found.')
@@ -33,5 +32,7 @@ module.exports = {
       console.error(err)
     }
   })
+		).catch((error) => console.log);
+		
 	}
 };
