@@ -6,7 +6,7 @@ module.exports = {
 	usage: 'boorutest [name]',
 	description: 'Testing out the Booru.',
 	execute: (message, args) => {	
-		var imgLink = ''
+		var imgLink = 'https://cdn.shopify.com/s/files/1/1061/1924/products/Woman_Saying_Hello_Emoji_grande.png?v=1571606062'
 		Booru.search('safebooru', ['glaceon'], { limit: 1, random: true })
 			.then(posts => {
 				for (let post of posts)
@@ -14,7 +14,7 @@ module.exports = {
 				})
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
-			.setTitle('Booru')
+			.setTitle('Booru' + imgLink)
 			.setImage(imgLink)
 		).catch((error) => console.log)
 	}
