@@ -24,7 +24,7 @@ module.exports = {
 };
 
 
-
+/*
 // Search with promises
 Booru.search(site, tags, { limit: 1, random: false })
   .then(posts => {
@@ -69,3 +69,4 @@ async function booruClassSearch(site, tags, limit = 1, random = true) {
 //   console.log(Booru.sites)
 // Or just the site URLs
 //   console.log(Object.keys(sites))
+*/
