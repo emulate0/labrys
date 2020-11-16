@@ -13,7 +13,7 @@ module.exports = {
 			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true })
 	.then(posts => {
 		for (let post of posts)
-      .addImage('post.fileUrl')
+      .addImage(post.fileUrl)
   })
   
 		).catch((error) => console.log);
