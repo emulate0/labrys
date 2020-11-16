@@ -6,7 +6,7 @@ module.exports = {
 	usage: 'boorutest [name]',
 	description: 'Testing out the Booru.',
 	execute: (message, args) => {
-		booruSearch('safebooru', ['cat'])
+		booruSearch(args[0], args[1])
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 
