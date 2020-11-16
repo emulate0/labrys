@@ -9,7 +9,7 @@ const client = new Client({
 
 // Constants.
 client.PREFIX = '!';
-client.colors = { SUCCESS: '#32CD32', WARNING: '#FDEE00', ERROR: '#FF2400', INFO: '#007FFF' };
+client.colors = { SUCCESS: '#32CD32', WARNING: '#FDEE00', ERROR: '#FF2400', INFO: '#007FFF', NSFW: "#ff0000" };
 client.urls = {
 	REPO: 'https://github.com/emulate0/labrys',
 	WEBSITE: 'https://polyester.club',

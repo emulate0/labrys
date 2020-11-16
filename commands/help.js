@@ -1,13 +1,13 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-	names: ['help'],
-	usage: 'HELP [Command Name]',
+	names: ['help, commands'],
+	usage: 'help [command]',
 	description: 'Returns a list of commands.',
 	execute: (message, args) => {
 		const embed = new MessageEmbed()
 			.setColor(message.client.colors.INFO)
-			.setTitle('Help')
+			.setTitle('Commands')
 		if (args.length) {
 			// Specific command.
 			const command = message.client.commands.find((command) => command.names.includes(args[0]));
