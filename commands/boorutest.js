@@ -12,7 +12,7 @@ module.exports = {
 		//site, tags
 		if (message.channel.nsfw)
 		{
-		var randWebNSFW = Math.floor(Math.random() * 11);
+		var randWebNSFW = Math.floor(Math.random() * 11)
 		booruSearch(nsfw[randWebNSFW], args[1])
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
@@ -25,13 +25,13 @@ module.exports = {
 		}
 		else
 		{
-		var randWebSFW = Math.floor(Math.random() * 4);	
+		var randWebSFW = Math.floor(Math.random() * 4)
 		console.log(sfw[randWebSFW])
 		booruSearch(sfw[randWebSFW], args[1])
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
-				.setColor(message.client.colors.NSFW)
+				.setColor(message.client.colors.SUCCESS)
 				.setTitle('Boorutest')
 				.setImage(posts[0].fileUrl)
 			).catch((error) => console.log)
