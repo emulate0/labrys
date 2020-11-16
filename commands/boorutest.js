@@ -7,15 +7,17 @@ module.exports = {
 	description: 'Testing out the Booru.',
 	execute: (message, args) => {	
 		return message.channel.send(new MessageEmbed()
+		
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru')
+			.addImage(post.fileUrl)
 			
 			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true }).then(posts =>
 		{
 			for (let post of posts)
 				const imageLink = post.fileUrl
-		})
-			.addImage(post.fileUrl)
+		})		
+			
 		).catch((error) => console.log);
 		
 	}
