@@ -12,7 +12,6 @@ module.exports = {
 			.addField('API', `${Math.round(message.client.ws.ping)}ms`, true)
 		).catch((error) => console.log);
 		
-		message.channel.send(
 		Booru.search('safebooru', 'glaceon', { limit: 1, random: true })
   .then(posts => {
     if (posts.length === 0) {
@@ -20,7 +19,7 @@ module.exports = {
     }
 
     for (let post of posts) {
-      console.log(post.fileUrl)
+      message.send(post.fileUrl)
     }
   })
   .catch(err => {
@@ -32,6 +31,6 @@ module.exports = {
       // This means something pretty bad happened
       console.error(err)
     }
-  }))
+  })
 	}
 };
