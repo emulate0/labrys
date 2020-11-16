@@ -12,7 +12,7 @@ module.exports = {
 			.addField('API', `${Math.round(message.client.ws.ping)}ms`, true)
 		).catch((error) => console.log);
 		
-		client.message.send(
+		message.channel.send(
 		Booru.search('safebooru', 'glaceon', { limit: 1, random: true })
   .then(posts => {
     if (posts.length === 0) {
