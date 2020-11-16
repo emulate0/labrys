@@ -14,7 +14,7 @@ module.exports = {
 					for (let post of posts)
 						.setImage(post.fileUrl)
 						console.log(post.fileUrl, post.postView)
-					})
+					}))
 		).catch((error) => console.log)
 	}
 };
