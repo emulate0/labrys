@@ -10,13 +10,7 @@ module.exports = {
 		
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru')
-			.addImage(post.fileUrl)
-			
-			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true }).then(posts =>
-		{
-			for (let post of posts)
-				const imageLink = post.fileUrl
-		})		
+			.addImage('https://cdn.bulbagarden.net/upload/thumb/2/23/471Glaceon.png/250px-471Glaceon.png')
 			
 		).catch((error) => console.log);
 		
