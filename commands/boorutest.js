@@ -14,6 +14,7 @@ module.exports = {
 		var imgLink = 'https://cdn.shopify.com/s/files/1/1061/1924/products/Woman_Saying_Hello_Emoji_grande.png?v=1571606062'
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
+			.setTitle('Boorutest')
 			.setImage(booruSearch('safebooru', ['cat']))
 		).catch((error) => console.log)
 	}
