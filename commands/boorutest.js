@@ -5,11 +5,16 @@ module.exports = {
 	names: ['boorutest'],
 	usage: 'boorutest [name]',
 	description: 'Testing out the Booru.',
-	execute: (message, args) => {
+	execute: (message, args) => {	
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru')
-			.setImage('https://cdn.bulbagarden.net/upload/thumb/2/23/471Glaceon.png/250px-471Glaceon.png')
+			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true }).then(posts =>
+		{
+			for (let post of posts)
+				.setImage(post.fileUrl)
+		})		
 		).catch((error) => console.log);
+		
 	}
 };
