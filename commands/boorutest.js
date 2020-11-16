@@ -6,7 +6,7 @@ module.exports = {
 	usage: 'boorutest [name]',
 	description: 'Testing out the Booru.',
 	execute: (message, args) => {	
-		const imgLink = ''
+		var imgLink = ''
 		Booru.search('safebooru', ['glaceon'], { limit: 1, random: true })
 			.then(posts => {
 				for (let post of posts)
