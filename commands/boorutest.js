@@ -9,8 +9,13 @@ module.exports = {
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru')
-			.addField('Client', `${new Date() - message.createdAt}ms`, true)
-			.addField('API', `${Math.round(message.client.ws.ping)}ms`, true)
+			
+			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true })
+	.then(posts => {
+		for (let post of posts)
+      .addImage('post.fileUrl')
+  })
+  
 		).catch((error) => console.log);
 		
 	}
