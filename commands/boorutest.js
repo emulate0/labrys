@@ -13,5 +13,6 @@ module.exports = {
 			.addField('API', `${Math.round(message.client.ws.ping)}ms`, true)
 		).catch((error) => console.log);
 		
+		return message.send('balls');
 	}
 };
