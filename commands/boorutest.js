@@ -10,6 +10,7 @@ module.exports = {
 		Booru.search('safebooru', ['glaceon'], { limit: 1, random: true })
 			.then(posts => {
 				for (let post of posts)
+					console.log('holy shit agony')
 					imgLink = post.fileUrl
 				})
 		return message.channel.send(new MessageEmbed()
