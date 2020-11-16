@@ -62,7 +62,7 @@ client.on('guildCreate', (guild) => {
 	).catch((error) => console.log);
 });
 
-client.on('guildMemberAdd', (member) => {
+/*client.on('guildMemberAdd', (member) => {
 	if (!member.guild.systemChannel) { return; }
 	const embed = new MessageEmbed()
 		.setColor(client.colors.INFO)
@@ -78,9 +78,9 @@ client.on('guildMemberAdd', (member) => {
 			member.guild.systemChannel.send(embed.addField('Invite', usedInvite.code)).catch((error) => console.log);
 		})
 		.catch((error) => member.guild.systemChannel.send(embed).catch((error) => console.log));
-});
+});*/
 
-client.on('guildMemberRemove', (member) => {
+/*client.on('guildMemberRemove', (member) => {
 	if (!member.guild.systemChannel) { return; }
 	member.guild.systemChannel.send(new MessageEmbed()
 		.setColor(client.colors.INFO)
@@ -88,7 +88,7 @@ client.on('guildMemberRemove', (member) => {
 		.setDescription(`${member} has left the guild.`)
 		.setThumbnail(member.user.displayAvatarURL())
 	).catch((error) => console.log);
-});
+});*/
 
 client.on('inviteCreate', (invite) => {
 	invite.guild.fetchInvites()
@@ -200,13 +200,13 @@ client.on('message', (message) => {
 		if (!commandName.charAt(0).match(/[a-z]/)) { return; }
 
 		const command = client.commands.find((command) => command.names.includes(commandName));
-		if (!command) {
+		/*if (!command) {
 			return message.channel.send(new MessageEmbed()
 				.setColor(client.colors.WARNING)
 				.setTitle('Unknown Command')
 				.setDescription(`Unknown command. Use \`${client.PREFIX}help\` to get a list of commands.`)
 			).catch((error) => console.log);
-		}
+		}*/
 
 		// Check argument count.
 		if (command.usage) {
@@ -241,7 +241,7 @@ client.on('message', (message) => {
 	if (message.author.bot) { return; }
 	if (message.content.startsWith(client.PREFIX)) { execute(); }
 
-	if (message.mentions.has(client.user)) {
+	/*if (message.mentions.has(client.user)) {
 		return message.channel.send(new MessageEmbed()
 			.setColor(client.colors.INFO)
 			.setDescription(`Hello, ${message.author}! Get a list of my commands using \`${client.PREFIX}help\`.`)
@@ -249,7 +249,7 @@ client.on('message', (message) => {
 			.addField('Source Code', client.urls.REPO)
 			.addField('Website', client.urls.WEBSITE)
 		).catch((error) => console.log);
-	}
+	}*/
 });
 
 client.login(process.env.bot_token);
