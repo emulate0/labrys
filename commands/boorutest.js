@@ -9,12 +9,5 @@ module.exports = {
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru')
-			Booru.search('safebooru', ['glaceon'], { limit: 3, random: true }).then(posts =>
-		{
-			for (let post of posts)
-				.setImage(post.fileUrl)
-		})		
-		).catch((error) => console.log);
-		
 	}
 };
