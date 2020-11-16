@@ -13,7 +13,7 @@ module.exports = {
 		).catch((error) => console.log);
 		
 		client.message.send(
-		Booru.search(site, tags, { limit: 1, random: true })
+		Booru.search('safebooru', 'glaceon', { limit: 1, random: true })
   .then(posts => {
     if (posts.length === 0) {
       console.log('No images found.')
