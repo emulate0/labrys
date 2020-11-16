@@ -12,6 +12,7 @@ module.exports = {
 			return console.log(posts[0].fileUrl)
 		}	
 		var imgLink = 'https://cdn.shopify.com/s/files/1/1061/1924/products/Woman_Saying_Hello_Emoji_grande.png?v=1571606062'
+		booruSearch('safebooru', ['cat'])
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru' + imgLink)
