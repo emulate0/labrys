@@ -9,5 +9,6 @@ module.exports = {
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru')
-	}.catch((error) => console.log)
+		).catch((error) => console.log)
+	}
 };
