@@ -30,6 +30,6 @@ module.exports = {
 		return message.channel.send(new messageEmbed()
 			.setColor(message.client.colors.NSFW)
 			.setTitle('Booru')
-			.setThumbnail(booruUrl)
+			.setImage(booruUrl)
 	}
 };
