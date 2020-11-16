@@ -25,8 +25,7 @@ module.exports = {
 	  booruUrl = post.fileUrl
       console.log(post.fileUrl)
     }
-  })
-  .catch(error) => console.log);
+  }).catch(error) => console.log);
 		
 		return message.channel.send(new messageEmbed()
 			.setColor(message.client.colors.NSFW)
