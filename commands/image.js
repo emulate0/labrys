@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const Booru = require('booru')
-var sfw = ['konan', 'safebooru']
-var nsfw = ['e621', 'hypnohub', 'danbooru', 'konac', 'yandere', 'gelbooru', 'rule34', 'xbooru', 'paheal', 'derp', 'realbooru', 'tbib']
+var sfw = ['safebooru']
+var nsfw = ['e621', 'hypnohub', 'danbooru', 'konac', 'yandere', 'gelbooru', 'rule34', 'xbooru', 'paheal', 'derp', 'realbooru', 'tbib', 'konan']
 
 module.exports = {
 	names: ['image'],
