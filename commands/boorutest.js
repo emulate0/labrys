@@ -11,7 +11,7 @@ module.exports = {
 			.then(posts => {
 				for (let post of posts)
 					console.log('holy shit agony')
-					imgLink = post.fileUrl
+					imgLink === post.fileUrl
 				})
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.NSFW)
