@@ -7,7 +7,7 @@ module.exports = {
 	description: 'Testing out the Booru.',
 	execute: (message, args) => {	
 		var imgLink = 'https://cdn.shopify.com/s/files/1/1061/1924/products/Woman_Saying_Hello_Emoji_grande.png?v=1571606062'
-		Booru.search('safebooru', ['glaceon'], { limit: 1, random: true })
+		Booru.search('safebooru', ['glaceon'], { limit: 3, random: true })
 			.then(posts => {
 				for (let post of posts)
 					console.log('holy shit agony')
