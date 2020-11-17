@@ -7,7 +7,7 @@ module.exports = {
 	execute: (message, args) => {
 		var totalNum = 0
 		var i
-		for (i = 0; i < args[0]; i++){
+		for (let i = 0; i < args[0]; i++){
 			totalNum += (Math.floor(Math.random() * args[1]) + 1
 		}
 		return message.channel.send(new MessageEmbed()
