@@ -28,6 +28,8 @@
     "booru": "^2.4.0",
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
-    "pg": "^8.5.1"
+    "image-grabberjs": "^1.0.5",
+    "pg": "^8.5.1",
+    "random-puppy": "^1.1.0"
   }
 }
