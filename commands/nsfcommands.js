@@ -8,9 +8,11 @@ module.exports = {
 	description: 'Generates a picture relating to the command.',
 	execute: (message) => {
 		var searchTag = [message]
+		searchTag.substring(1)
+		console.log(searchTag)
 		if (message.channel.nsfw)
 		{
-		booruSearch('realbooru', searchTag[0].substring(1))
+		booruSearch('realbooru', searchTag[0])
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
