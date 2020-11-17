@@ -26,7 +26,6 @@ module.exports = {
 		else
 		{
 		var randWebSFW = Math.floor(Math.random() * sfw.length)
-		console.log(sfw[randWebSFW])
 		booruSearch(sfw[randWebSFW], args[0])
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
