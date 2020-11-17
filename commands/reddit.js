@@ -8,10 +8,10 @@ module.exports = {
 	description: 'Generates a random image from a subreddit.',
 	execute: (message, args) => {
 		var subreddit = args[0]
-		var imgUrl = ''
 
 		if (message.channel.nsfw)
 		{
+			var imgUrl = ''
 			async function getImages() {
 				let fetchedImage = await grabber(subreddit)
 				imgUrl = fetchedImage
@@ -26,6 +26,7 @@ module.exports = {
 		}
 		else
 		{
+			var imgUrl = ''
 			randomPuppy(subreddit)
 				.then(url => {
 					imgUrl = url
