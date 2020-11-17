@@ -8,8 +8,6 @@ module.exports = {
 	usage: 'b [tag], [tag]...',
 	description: 'Generates an image from a booru.',
 	execute: (message, args) => {
-		//add random from sfw and nsfw
-		//site, tags
 		if (message.channel.nsfw)
 		{
 		var randWebNSFW = Math.floor(Math.random() * nsfw.length)

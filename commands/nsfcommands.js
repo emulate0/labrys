@@ -7,11 +7,10 @@ module.exports = {
 	usage: 'ass',
 	description: 'Generates a picture relating to the command.',
 	execute: (message) => {
-		//add random from sfw and nsfw
-		//site, tags
+		var searchTag = [message]
 		if (message.channel.nsfw)
 		{
-		booruSearch('realbooru', message)
+		booruSearch('realbooru', searchTag)
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
