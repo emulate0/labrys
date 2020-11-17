@@ -7,7 +7,7 @@ module.exports = {
 	usage: 'ass',
 	description: 'Generates a picture relating to the command.',
 	execute: (message) => {
-		var searchTag = [message]
+		var searchTag = [message.toString, '']
 		console.log(searchTag)
 		if (message.channel.nsfw)
 		{
