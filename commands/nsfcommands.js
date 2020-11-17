@@ -10,7 +10,7 @@ module.exports = {
 		var searchTag = [message]
 		if (message.channel.nsfw)
 		{
-		booruSearch('realbooru', searchTag)
+		booruSearch('realbooru', searchTag[0].substring(1))
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
