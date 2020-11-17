@@ -29,6 +29,7 @@
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
     "image-grabberjs": "^1.0.5",
+    "memejs": "^1.2.3",
     "pg": "^8.5.1",
     "random-puppy": "^1.1.0"
   }

@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js');
-const grabber = require("image-grabberjs");
+const { meme } = require('memejs');
+const { memeAsync } = require('memejs');
 const randomPuppy = require('random-puppy');
 
 module.exports = {
@@ -12,28 +13,24 @@ module.exports = {
 
 		if (message.channel.nsfw)
 		{
-			async function getImages() {
-				let fetchedImage = await grabber(subreddit)
-				imgUrl = fetchedImage
-				console.log(imgUrl)
-				return message.channel.send(new MessageEmbed()
-					.setColor(message.client.colors.NSFW)
-					.setTitle('Subreddit: ' + args[0])
-					.setImage(imgUrl)	
-				).catch((error) => console.log);		
-			}
-			getImages()
+			ameme(subreddit, function(err, data) {
+            if (err) return console.error(err)
+			return message.channel.send(new MessageEmbed()
+				.setColor(message.client.colors.SUCCESS)
+				.setTitle('Subreddit: ' + args[0])
+				.setImage(data.url)
+			).catch((error) => console.log);	
+            const memeRes = new Discord.RichEmbed()
+			)
 		}
 		else
 		{
 			randomPuppy(subreddit)
 				.then(url => {
-					imgUrl = url
-					console.log(imgUrl)
 					return message.channel.send(new MessageEmbed()
 						.setColor(message.client.colors.SUCCESS)
 						.setTitle('Subreddit: ' + args[0])
-						.setImage(imgUrl)
+						.setImage(url)
 					).catch((error) => console.log);			
 				})
 		}
