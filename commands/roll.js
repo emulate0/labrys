@@ -7,8 +7,8 @@ module.exports = {
 	execute: (message, args) => {
 		var totalNum = 0
 		var i
-		for (let i = 0; i < args[0]; i++){
-			totalNum += (Math.floor(Math.random() * args[1]) + 1
+		for (let i = 0; i < args[0]; i++) {
+			totalNum += Math.floor(Math.random() * args[1]) + 1
 		}
 		return message.channel.send(new MessageEmbed()
 			.setColor(message.client.colors.INFO)
