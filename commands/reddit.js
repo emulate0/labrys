@@ -22,6 +22,7 @@ module.exports = {
 			).catch((error) => console.log);	
             const memeRes = new Discord.RichEmbed()
 			)
+			}
 		}
 		else
 		{
