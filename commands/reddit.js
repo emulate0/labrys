@@ -15,8 +15,8 @@ module.exports = {
 			async function getImages() {
 				let fetchedImage = await grabber(subreddit)
 				imgUrl = fetchedImage
+				console.log(imgUrl)
 			}
-			getImages()
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.NSFW)
 				.setTitle('Subreddit: ' + args[0])
@@ -28,6 +28,7 @@ module.exports = {
 			randomPuppy(subreddit)
 				.then(url => {
 					imgUrl = url
+					console.log(imgUrl)
 				})
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.SUCCESS)
