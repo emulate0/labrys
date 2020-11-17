@@ -23,13 +23,10 @@ module.exports = {
 		}
 		else
 		{
-
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.SUCCESS)
 				.addField("You don't hafta do this, ya know.", "It seemed like we'd make a pretty good team! Come back again, okay? [Not an NSFW channel.]")
 			).catch((error) => console.log)
 		}		
 		}
-		
-	}
 };
