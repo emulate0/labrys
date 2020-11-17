@@ -7,9 +7,35 @@ module.exports = {
 	usage: 'ass',
 	description: 'Generates a picture relating to the command.',
 	execute: (message) => {
+		var searchTerm = ['ass', 'boobs', 'tits', 'pussy', 'thighs', 'woman']
+		var searchNum = 0
+		if(message == '!ass')
+		{
+			searchNum = 0
+		}
+		else if (message == '!boobs')
+		{
+			searchNum = 1
+		}
+		else if (message == '!tits')
+		{
+			searchNum = 2
+		}
+		else if (message == '!pussy')
+		{
+			searchNum = 3
+		}
+		else if (message == '!thighs')
+		{
+			searchNum = 4
+		}
+		else if (message == '!females')
+		{
+			searchNum = 5
+		}
 		if (message.channel.nsfw)
 		{
-		booruSearch('realbooru', message[0])
+		booruSearch('realbooru', searchTerm[searchNum])
 		async function booruSearch(site, tags, limit = 1, random = true) {
 			const posts = await Booru.search(site, tags, {limit, random})
 			return message.channel.send(new MessageEmbed()
