@@ -8,7 +8,6 @@ module.exports = {
 	description: 'Generates a picture relating to the command.',
 	execute: (message) => {
 		var searchTag = [message]
-		searchTag.substring(1)
 		console.log(searchTag)
 		if (message.channel.nsfw)
 		{
