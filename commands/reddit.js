@@ -16,6 +16,7 @@ module.exports = {
 				let fetchedImage = await grabber(subreddit)
 				imgUrl = fetchedImage
 			}
+			getImages()
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.NSFW)
 				.setTitle('Subreddit: ' + args[0])
