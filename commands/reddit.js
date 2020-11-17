@@ -13,7 +13,7 @@ module.exports = {
 
 		if (message.channel.nsfw)
 		{
-			ameme(subreddit, function(err, data) {
+			meme(subreddit, function(err, data) {
             if (err) return console.error(err)
 			return message.channel.send(new MessageEmbed()
 				.setColor(message.client.colors.SUCCESS)
