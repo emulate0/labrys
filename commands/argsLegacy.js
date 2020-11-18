@@ -14,3 +14,4 @@ module.exports = {
 		return message.channel.send(embed).catch((error) => console.log);
 	}
 };
+*/
