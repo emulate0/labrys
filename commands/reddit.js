@@ -12,7 +12,7 @@ module.exports = {
 		var imgUrl = ''
 
 		if (message.channel.nsfw)
-		{/*
+		{
 			meme(subreddit, function(err, data) {
             if (err) return console.error(err)
 			return message.channel.send(new MessageEmbed()
@@ -20,9 +20,9 @@ module.exports = {
 				.setTitle('Subreddit: ' + args[0])
 				.setImage(data.url)
 			).catch((error) => console.log);	
-			)
 			}
-			*/
+			)
+			
 		}
 		else
 		{
