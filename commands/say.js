@@ -8,11 +8,8 @@ module.exports = {
 		{
 			senTence += args[i] + ' '
 			console.log(senTence)
-			if(i = args.length - 1)
-			{
-				message.delete()
-			}
 		}
+		message.delete()
 		return message.channel.send(senTence)	
 	}
 };
