@@ -11,9 +11,9 @@ module.exports = {
 			if(i = args.length - 1)
 			{
 				message.delete()
+				return message.channel.send(senTence)
 			}
 		}
-		return message.channel.send(senTence)
 			
 	}
 };
