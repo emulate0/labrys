@@ -7,6 +7,10 @@ module.exports = {
 		for (let i = 0; i < args.length; i++)
 		{
 			senTence += args[i] + ' '
+			if(i = args.length - 1)
+			{
+				message.delete(1000)
+			}
 		}
 		return message.channel.send(senTence)
 			
