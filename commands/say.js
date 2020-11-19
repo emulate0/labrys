@@ -6,8 +6,7 @@ module.exports = {
 		var senTence = ''
 		for (let i = 0; i < args.length; i++)
 		{
-			senTence.concat(args[i])
-			senTence += ' '
+			senTence += args[i] + ' '
 			console.log(senTence)
 			if(i = args.length - 1)
 			{
