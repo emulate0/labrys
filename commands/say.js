@@ -8,7 +8,8 @@ module.exports = {
 		{
 			senTence.concat(args[i])
 			senTence += ' '
-			if(args[i] = args[args.length - 1])
+			console.log(senTence)
+			if(i = args.length - 1)
 			{
 				message.delete()
 				return message.channel.send(senTence)
