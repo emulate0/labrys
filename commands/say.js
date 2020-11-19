@@ -9,7 +9,7 @@ module.exports = {
 			senTence += args[i] + ' '
 			if(i = args.length - 1)
 			{
-				msg.delete()
+				message.delete()
 			}
 		}
 		return message.channel.send(senTence)
