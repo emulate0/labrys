@@ -7,7 +7,6 @@ module.exports = {
 		for (let i = 0; i < args.length; i++)
 		{
 			senTence += args[i] + ' '
-			console.log(senTence)
 		}
 		message.delete()
 		return message.channel.send(senTence)	
