@@ -4,12 +4,14 @@ module.exports = {
 	description: 'Make Labrys say something.',
 	execute: (message, args) => {
 		var senTence = ''
-		for (let i = 0; i < args.length; i++)
+		var sizeOf = args.length
+		for (let i = 0; i < sizeOf; i++)
 		{
 			senTence += args[i] + ' '
 			console.log(args[i])
-			if(i = args.length - 1)
+			if(i = sizeOf)
 			{
+				console.log(sizeOf)
 				message.delete()
 				return message.channel.send(senTence)
 			}
