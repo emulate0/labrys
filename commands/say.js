@@ -7,6 +7,7 @@ module.exports = {
 		for (let i = 0; i < args.length; i++)
 		{
 			senTence += args[i] + ' '
+			console.log(args[i])
 			if(i = args.length - 1)
 			{
 				message.delete()
